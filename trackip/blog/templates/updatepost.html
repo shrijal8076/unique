@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="col-sm-10">
+    <h1 class="text-warning fw-bold my-5">Dashboard/Update Post</h1>
+</div>
+<form action="" method="post" nonvalidate>
+    {% csrf_token %}
+    {{form.as_p}}
+    <input  type="submit" value="Update" class="btn btn-warning my-5"></input>
+
+    <a href="{% url 'dashboard' %}" type="submit" value="Cancel" class="btn btn-warning my-5">DashBoard/Cancel</a>
+</form>
+{% endblock %}
